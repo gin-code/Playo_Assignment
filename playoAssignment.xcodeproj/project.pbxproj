@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		5478547A2872CB7E0055BF8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547854792872CB7E0055BF8C /* AppDelegate.swift */; };
 		5478547C2872CB7E0055BF8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478547B2872CB7E0055BF8C /* SceneDelegate.swift */; };
-		5478547E2872CB7E0055BF8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478547D2872CB7E0055BF8C /* ViewController.swift */; };
 		547854812872CB7E0055BF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5478547F2872CB7E0055BF8C /* Main.storyboard */; };
 		547854832872CB830055BF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547854822872CB830055BF8C /* Assets.xcassets */; };
 		547854862872CB830055BF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547854842872CB830055BF8C /* LaunchScreen.storyboard */; };
+		54B808902872CD9C00603AB9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8088F2872CD9C00603AB9 /* DataModel.swift */; };
+		54B808932872CE3D00603AB9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B808922872CE3D00603AB9 /* HomeVC.swift */; };
+		54B808952872CF4C00603AB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B808942872CF4C00603AB9 /* NewsCell.swift */; };
 		CBB9BB86934645E6AE988710 /* Pods_playoAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4A350105730AA023D4FFEA /* Pods_playoAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		547854762872CB7E0055BF8C /* playoAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playoAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547854792872CB7E0055BF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5478547B2872CB7E0055BF8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5478547D2872CB7E0055BF8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		547854802872CB7E0055BF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		547854822872CB830055BF8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547854852872CB830055BF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		547854872872CB830055BF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B8088F2872CD9C00603AB9 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		54B808922872CE3D00603AB9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		54B808942872CF4C00603AB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		688472DE199C1385D6F2B426 /* Pods-playoAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playoAssignment.release.xcconfig"; path = "Target Support Files/Pods-playoAssignment/Pods-playoAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		E4A4370D82EEFDE7B7E10CC4 /* Pods-playoAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playoAssignment.debug.xcconfig"; path = "Target Support Files/Pods-playoAssignment/Pods-playoAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		EF4A350105730AA023D4FFEA /* Pods_playoAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playoAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +52,6 @@
 				E4A4370D82EEFDE7B7E10CC4 /* Pods-playoAssignment.debug.xcconfig */,
 				688472DE199C1385D6F2B426 /* Pods-playoAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,13 +78,39 @@
 			children = (
 				547854792872CB7E0055BF8C /* AppDelegate.swift */,
 				5478547B2872CB7E0055BF8C /* SceneDelegate.swift */,
-				5478547D2872CB7E0055BF8C /* ViewController.swift */,
-				5478547F2872CB7E0055BF8C /* Main.storyboard */,
+				54B808912872CDA200603AB9 /* Model */,
+				54B8088D2872CD7100603AB9 /* View */,
+				54B8088E2872CD7B00603AB9 /* Controller */,
 				547854822872CB830055BF8C /* Assets.xcassets */,
-				547854842872CB830055BF8C /* LaunchScreen.storyboard */,
 				547854872872CB830055BF8C /* Info.plist */,
 			);
 			path = playoAssignment;
+			sourceTree = "<group>";
+		};
+		54B8088D2872CD7100603AB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5478547F2872CB7E0055BF8C /* Main.storyboard */,
+				547854842872CB830055BF8C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54B8088E2872CD7B00603AB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54B808922872CE3D00603AB9 /* HomeVC.swift */,
+				54B808942872CF4C00603AB9 /* NewsCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		54B808912872CDA200603AB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54B8088F2872CD9C00603AB9 /* DataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BEC2CBD497D7F7459CD91D3F /* Frameworks */ = {
@@ -207,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5478547E2872CB7E0055BF8C /* ViewController.swift in Sources */,
+				54B808902872CD9C00603AB9 /* DataModel.swift in Sources */,
+				54B808932872CE3D00603AB9 /* HomeVC.swift in Sources */,
 				5478547A2872CB7E0055BF8C /* AppDelegate.swift in Sources */,
 				5478547C2872CB7E0055BF8C /* SceneDelegate.swift in Sources */,
+				54B808952872CF4C00603AB9 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
