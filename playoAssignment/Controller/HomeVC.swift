@@ -11,11 +11,34 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
 
+        addRefreshControl()
     }
+    
+    func addRefreshControl() {
+        
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        }
+        
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        refreshControl.tintColor = UIColor.black.withAlphaComponent(0.3)
+        refreshControl.attributedTitle = NSAttributedString(string: "Updating News...", attributes: .none)
+        
+       
+    }
+    
+    @objc func refreshData(_ sender: Any) {
+        //UPDATE NEWS HERE
+    }
+    
+   
     
 
 
@@ -28,7 +51,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,9 +61,12 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 230.0
+    }
     
     
     
