@@ -5,7 +5,7 @@
 //  Created by Sparsh Singh on 04/07/22.
 //
 
-import Foundation
+import UIKit
 
 class NetworkClass {
     
@@ -19,7 +19,8 @@ class NetworkClass {
         
         // Check Internet Connection
         if !Reachability.isConnectedToNetwork() {
-            Extensions.displayAlert(title: "Playo-NewsApp", message: "Internet Not Available." )
+            
+            print("Internet Not Available.")
             return
         }
 

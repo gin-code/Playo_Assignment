@@ -20,9 +20,13 @@ class HomeVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        getNews()
-        
         addRefreshControl()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getNews()
     }
     
     func addRefreshControl() {
@@ -44,8 +48,19 @@ class HomeVC: UIViewController {
     }
     
     
+    func displayAlert(message: String) {
+        let alertController = UIAlertController(title: "Playo - NewsApp", message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+            print("You've pressed OK Button")
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
     
 }
+
 
 // MARK: - TABLE VIEW DELGATES
 
@@ -66,7 +81,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         if !articles.isEmpty {
             
-            cell.authorLabel.text = articles[indexPath.row].author
+            cell.authorLabel.text = "Authored by - \(articles[indexPath.row].author!)"
             cell.descriptionTextview.text = articles[indexPath.row].description
             cell.titleLabel.text = articles[indexPath.row].title
             
@@ -78,6 +93,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WebViewVC") as! WebViewVC
+        vc.urlString = articles[indexPath.row].url ?? ""
+        navigationController?.pushViewController(vc, animated: true)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -112,7 +132,7 @@ extension HomeVC {
                 
             } else {
                 DispatchQueue.main.async {
-                    Extensions.displayAlert(title: "Playo - NewsApp",message: "Plese refresh or retry later.")
+                    self.displayAlert(message: "Plese refresh or retry later.")
                 }
                 
             }
@@ -121,7 +141,7 @@ extension HomeVC {
             print("Error")
             self.dismissHUD()
             DispatchQueue.main.async {
-                Extensions.displayAlert(title: "Basis",message: "Some went worng, please try after some time")
+                self.displayAlert(message: "Some went worng, please try after some time")
             }
         }))
         

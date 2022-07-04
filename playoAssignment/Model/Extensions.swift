@@ -10,16 +10,6 @@ import MBProgressHUD
 
 class Extensions {
     
-    static func displayAlert(title: String, message: String) {
-     let alertController = UIAlertController(title: title  , message: message, preferredStyle: .alert)
-     let defaultAction = UIAlertAction(title: "OK" , style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        guard let viewController = UIApplication.shared.keyWindow?.rootViewController else {
-            fatalError("keyWindow has no rootViewController")
-        }
-        viewController.present(alertController, animated: true, completion: nil)
-    }
-    
     static func downloadImageFromURl(UrlString: String, image: UIImageView) {
            
            if let url = URL(string: UrlString) {
@@ -44,6 +34,7 @@ extension UIViewController {
          DispatchQueue.main.async{
             let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
             progressHUD.label.text = "Loading..."
+            progressHUD.hide(animated: true, afterDelay: 5)
          }
      }
 
