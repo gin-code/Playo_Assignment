@@ -39,8 +39,6 @@ class HomeVC: UIViewController {
     }
     
    
-    
-
 
 }
 
@@ -67,7 +65,9 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 230.0
     }
-    
-    
-    
+     
 }
+
+// MARK: - API INTEGRATION
+
+

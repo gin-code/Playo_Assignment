@@ -15,6 +15,7 @@
 		54B808902872CD9C00603AB9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8088F2872CD9C00603AB9 /* DataModel.swift */; };
 		54B808932872CE3D00603AB9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B808922872CE3D00603AB9 /* HomeVC.swift */; };
 		54B808952872CF4C00603AB9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B808942872CF4C00603AB9 /* NewsCell.swift */; };
+		54B808972872D61A00603AB9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B808962872D61A00603AB9 /* Extensions.swift */; };
 		CBB9BB86934645E6AE988710 /* Pods_playoAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4A350105730AA023D4FFEA /* Pods_playoAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		54B8088F2872CD9C00603AB9 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		54B808922872CE3D00603AB9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		54B808942872CF4C00603AB9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		54B808962872D61A00603AB9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		688472DE199C1385D6F2B426 /* Pods-playoAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playoAssignment.release.xcconfig"; path = "Target Support Files/Pods-playoAssignment/Pods-playoAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		E4A4370D82EEFDE7B7E10CC4 /* Pods-playoAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playoAssignment.debug.xcconfig"; path = "Target Support Files/Pods-playoAssignment/Pods-playoAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		EF4A350105730AA023D4FFEA /* Pods_playoAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playoAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				54B8088F2872CD9C00603AB9 /* DataModel.swift */,
+				54B808962872D61A00603AB9 /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B808902872CD9C00603AB9 /* DataModel.swift in Sources */,
+				54B808972872D61A00603AB9 /* Extensions.swift in Sources */,
 				54B808932872CE3D00603AB9 /* HomeVC.swift in Sources */,
 				5478547A2872CB7E0055BF8C /* AppDelegate.swift in Sources */,
 				5478547C2872CB7E0055BF8C /* SceneDelegate.swift in Sources */,

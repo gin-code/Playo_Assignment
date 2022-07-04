@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-playoAssignment/Pods-playoAssignment-frameworks.sh
-${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework

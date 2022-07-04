@@ -7,6 +7,6 @@ target 'playoAssignment' do
 
   # Pods for playoAssignment
 
-pod 'ProgressHUD'
+pod 'MBProgressHUD'
 
 end
